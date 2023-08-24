@@ -21,10 +21,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Step 1: Create two virtual machines in microsoft azure
+- Step 2: Observe ICMP Traffic using wireshark
+- Step 3: Observe DHCP traffic using wireshark
 
 <h2>Actions and Observations</h2>
 
@@ -32,7 +31,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Here in this step I setup two virtual machines with which I will send traffic back and forth. One virtual machine will be using windows 10 and the other will be using Linux (Ubuntu). They will share the same resource group and virtual network.
 </p>
 <br />
 
@@ -40,7 +39,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Within the Windows 10 Virtual Machine, I installed Wireshark and set the filter to observe ICMP traffic. ICMP is the protocol that is used for ping and troubleshooting. My ping was sent to the private IP address of the Ubuntu vm and it created traffic. Next I opened the Network Security Group on the Ubuntu VM and disabled incoming (inbound) ICMP traffic and saw that the traffic was stopped on wireshark.
+
 </p>
 <br />
 
@@ -48,6 +48,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Here I set the filter on wireshark to DHCP to observe DHCP traffic. From the Windows 10 VM, I attempted to issue the VM a new IP address from the command line using the ipconfig /renew command and observed the DHCP traffic appearing in WireShark.
+
 </p>
 <br />
