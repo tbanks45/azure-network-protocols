@@ -28,7 +28,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![image](https://github.com/tbanks45/azure-network-protocols/assets/142834800/f778641c-1992-4581-9d1e-4a4de9e9bcd8)
 </p>
 <p>
 Here in this step I setup two virtual machines with which I will send traffic back and forth. One virtual machine will be using windows 10 and the other will be using Linux (Ubuntu). They will share the same resource group and virtual network.
