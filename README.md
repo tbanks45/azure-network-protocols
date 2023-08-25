@@ -36,7 +36,7 @@ Here in this step I setup two virtual machines with which I will send traffic ba
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![image](https://github.com/tbanks45/azure-network-protocols/assets/142834800/9c904551-64b7-4b99-9980-2bde899cbc7a)
 </p>
 <p>
 Within the Windows 10 Virtual Machine, I installed Wireshark and set the filter to observe ICMP traffic. ICMP is the protocol that is used for ping and troubleshooting. My ping was sent to the private IP address of the Ubuntu vm and it created traffic. Next I opened the Network Security Group on the Ubuntu VM and disabled incoming (inbound) ICMP traffic and saw that the traffic was stopped on wireshark.
