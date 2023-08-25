@@ -45,7 +45,7 @@ Within the Windows 10 Virtual Machine, I installed Wireshark and set the filter 
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![image](https://github.com/tbanks45/azure-network-protocols/assets/142834800/062b04a7-8e97-40f4-b96f-b634439b1907)
 </p>
 <p>
 Here I set the filter on wireshark to DHCP to observe DHCP traffic. From the Windows 10 VM, I attempted to issue the VM a new IP address from the command line using the ipconfig /renew command and observed the DHCP traffic appearing in WireShark.
