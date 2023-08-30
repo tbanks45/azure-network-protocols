@@ -28,15 +28,22 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>Actions and Observations</h2>
 
 <p>
+  
 ![image](https://github.com/tbanks45/azure-network-protocols/assets/142834800/f778641c-1992-4581-9d1e-4a4de9e9bcd8)
+
+
 </p>
 <p>
 Here in this step I setup two virtual machines with which I will send traffic back and forth. One virtual machine will be using windows 10 and the other will be using Linux (Ubuntu). They will share the same resource group and virtual network.
+  
 </p>
 <br />
 
 <p>
+  
 ![image](https://github.com/tbanks45/azure-network-protocols/assets/142834800/9c904551-64b7-4b99-9980-2bde899cbc7a)
+
+
 </p>
 <p>
 Within the Windows 10 Virtual Machine, I installed Wireshark and set the filter to observe ICMP traffic. ICMP is the protocol that is used for ping and troubleshooting. My ping was sent to the private IP address of the Ubuntu vm and it created traffic. Next I opened the Network Security Group on the Ubuntu VM and disabled incoming (inbound) ICMP traffic and saw that the traffic was stopped on wireshark.
@@ -45,7 +52,10 @@ Within the Windows 10 Virtual Machine, I installed Wireshark and set the filter 
 <br />
 
 <p>
+  
 ![image](https://github.com/tbanks45/azure-network-protocols/assets/142834800/062b04a7-8e97-40f4-b96f-b634439b1907)
+
+
 </p>
 <p>
 Here I set the filter on wireshark to DHCP to observe DHCP traffic. From the Windows 10 VM, I attempted to issue the VM a new IP address from the command line using the ipconfig /renew command and observed the DHCP traffic appearing in WireShark.
